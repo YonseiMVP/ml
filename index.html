@@ -10,6 +10,22 @@
 	<link rel="stylesheet" href="css/vendor/fluidbox.min.css">
 	<link rel="stylesheet" href="css/main.css">
 
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+	<style>
+      table {
+        width: 100%;
+      }
+      table, th, td {
+        border: 1px solid #bcbcbc;
+      }
+    </style>
+
 	<title>MVPLab Courses</title>
 
 </head>
@@ -19,7 +35,7 @@
 	<header>
 
 		<div id="logo-container">
-			<div id="logo"><a href="/">MVP Lab Subpage</a></div>
+			<div id="logo">MVP Lab Subpage</div>
 			<div id="subtitle"></div>
 		</div>
 <!-- 		<nav>
@@ -47,12 +63,76 @@
 			<div class="col-full">
 				<h2>Text</h2><br><br>
 
-				<h3><a name="prer"><a href="#back"><font color="yellow">1. Probability Distribution</font></a></a></h3><br>
-
-				<h4><a name="MATLAB"><a href="#back">확률 분포에 대해서 배워 보자</a></a></h4>
+				<h3><a name="c_1"><a href="#back"><font color="yellow">1. Probability Distribution</font></a></a></h3><br>
 
 				<br>
-				<p>중간고사 전에 내용 정리 고고</p>
+				<p>기계 학습의 정의는, 관측된 Data로 부터 Model을 설계하는 것이다.</p>
+				<p>관측된 Data는 진짜 Data가 아니다.</p>
+				<p>진짜 Data로부터 Random하게 Sampling된 Data일 뿐이다.</p>
+				<p>진짜 Data는 무한하며, 연속적이다.</p>
+				<p>진짜 Data가 관측된 Data로 오기 위해서는 Sampling이 필요하다.</p>
+				<p>즉, 관측된 Data는 임의의 확률 분포(=진짜 Data 분포)에서 Sampling 된 것이라고 가정한다.</p>
+				<p>이것이 우리가 확률을 배우는 이유이다.</p>
+
+				<br>
+				<p>진짜 Data의 확률 분포, 혹은 다른 확률 분포 모두 유명한 분포들로 가정해 두고,</p>
+				<p>우리가 할 일은, 확률 분포의 Parameter를 구하는 것이다.</p>
+				<p>확률 분포가 직관적이지 않다면, 함수라고 생각해 보자.</p>
+				<p>단 함수의 x값이 있고, 그것에 따른 함수값 f(x)는 확률이다.</p>
+				<p>x는 우리의 관심사이며, Random Variable이라고도 부른다.</p>
+
+				<br>
+				<p>동전 던지기를 예로 들어보자, 여기서의 우리의 관심사는 앞면이냐 뒷면이냐이다.</p>
+				<p>이것이 Random Variable x = {0, 1}인 것이다.</p>
+				<p>그것의 함수값 f(x)는 확률일 것이다.</p>
+				<p>하지만 모르기에, 여기서는 그 확률을 이 확률 분포의 Parameter로 정의한다.</p>
+				<p>이것이 바로 Bernoulli Distribution이다.</p>
+
+				<br>
+				<p>Bernoulli 분포의 Parameter는 몇 개일까?</p>
+				<p>앞면과 뒷면 각각의 확률이니까 2개? 아니다, 확률의 합은 1이므로, 앞면(혹은 뒷면)일 경우의 확률만 Parameter로 두면 된다.</p>
+				<p>수식으로는 다음과 같다.</p>
+				<p>$$ P(x | \mu) = \mu^x (1-\mu)^{1-x} $$</p>
+				<p>Random Variable x = {0, 1}이었음을 기억하자.</p>
+				<p>우리가 해야할 일은? Parameter $$\mu$$를 알아내야 한다는 것이다.</p>
+				<p>무엇으로부터? 주어진 Data로 부터.</p>
+
+				<br>
+				<p>여기서 2가지 관점으로 나뉘어진다, Frequentist View와 Bayesian View.</p>
+				<p>Frequentist 관점에서는 진짜 Data(=확률 분포)의 Paramter가 Fixed된 것으로 본다.</p>
+				<p>즉 Given Data로부터 Maximum Likelihood 방법으로 찾는다. 끝.</p>
+				<p>Bayesian 관점은 확률 분포의 Parameter도 Random Variable이라는 관점이다.</p>
+				<p>Bayesian은 나중에 자세히 다루도록 하고, 여기서는 Frequentist View로서 접근하도록 한다.</p>
+
+				<br>
+				<p>Bernoulli 분포의 Parameter 구하기: MLE</p>
+
+				<br>
+				<p>Binomial 분포와 MLE</p>
+
+				<br>
+				<p>Multi-Bernoulli 분포와 MLE</p>
+
+				<br>
+				<p>Multinomial 분포와 MLE</p>
+
+				<br>
+				<p>Discrete 분포와 Classification</p>
+
+				<br>
+				<p>Gaussian 분포와 MLE (Multi-나눌지는 생각)</p>
+
+				<br>
+				<p>Continuous 분포와 MLE</p>
+
+				<br><br>
+				<h3><a name="c_2"><a href="#back"><font color="yellow">2. Linear Models for Regression</font></a></a></h3><br>
+
+				<br>
+				<p></p>
+
+
+
 
 				<br>
 
